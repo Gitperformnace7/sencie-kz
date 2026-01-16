@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sencie.kz — Косметика и парфюмерия | ИП Аманжолова</title>
+    <meta name="description" content="Sencie.kz — интернет-магазин косметики и парфюмерии в Астане. ИП Аманжолова Фариза Чингисқызы.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #c9a050;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #1a1a1a;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c9a050;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #fdfbf7 0%, #f9f5ed 100%);
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+
+        .hero h1 span {
+            color: #c9a050;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #c9a050;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #b8923f;
+        }
+
+        /* About */
+        .about {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .about-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 16px;
+            background: #fdfbf7;
+        }
+
+        .about-card-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            background: #c9a050;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .about-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .about-card p {
+            color: #666;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .contact-item-icon {
+            width: 40px;
+            height: 40px;
+            background: #c9a050;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: #c9a050;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            color: #999;
+            line-height: 1.8;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #999;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #c9a050;
+        }
+
+        .footer-legal {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+        }
+
+        .legal-info {
+            background: #252525;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .legal-info h5 {
+            color: #c9a050;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .legal-info p {
+            color: #bbb;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .legal-info p strong {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 15px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Sencie<span>.kz</span></a>
+                <nav>
+                    <a href="#about">О нас</a>
+                    <a href="#contact">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Красота начинается с <span>Sencie</span></h1>
+                <p>Качественная косметика и парфюмерия в Астане. Мы помогаем вам выглядеть и чувствовать себя прекрасно каждый день.</p>
+                <a href="#contact" class="btn">Связаться с нами</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-icon">✓</div>
+                    <h3>Оригинальная продукция</h3>
+                    <p>Только сертифицированная косметика и парфюмерия от проверенных поставщиков</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">♡</div>
+                    <h3>Индивидуальный подход</h3>
+                    <p>Поможем подобрать идеальные средства именно для вас</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">★</div>
+                    <h3>Доступные цены</h3>
+                    <p>Качественная продукция по приятным ценам в Астане</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Контакты</h2>
+                <p>Свяжитесь с нами любым удобным способом</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <span>г. Астана, ул. Сарайшық, 5Е, кв. 31</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📞</div>
+                        <span>+7 761 940 39 96</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">Sencie<span>.kz</span></a>
+                    <p>Интернет-магазин косметики и парфюмерии в Астане. Качественная продукция для вашей красоты.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <a href="#about">О нас</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>+7 761 940 39 96</p>
+                    <p>г. Астана</p>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <div class="legal-info">
+                    <h5>Юридическая информация</h5>
+                    <p><strong>ИП Аманжолова</strong></p>
+                    <p>Индивидуальный предприниматель: Аманжолова Фариза Чингисқызы</p>
+                    <p>ИИН: 960315400345</p>
+                    <p>Вид деятельности: Розничная торговля косметическими и парфюмерными товарами (ОКЭД 47712)</p>
+                    <p>Адрес: Республика Казахстан, г. Астана, ул. Сарайшық, 5Е, кв. 31</p>
+                    <p>Телефон: +7 761 940 39 96</p>
+                </div>
+                <p class="copyright">© 2024–2025 ИП Аманжолова. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
