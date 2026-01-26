@@ -153,6 +153,98 @@
             color: #666;
         }
 
+        /* Catalog */
+        .catalog {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: #c9a050;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #c9a050;
+        }
+
+        .product-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .product-btn:hover {
+            background: #c9a050;
+        }
+
+        @media (max-width: 1024px) {
+            .catalog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .catalog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Contact */
         .contact {
             padding: 80px 0;
@@ -307,6 +399,7 @@
             <div class="header-content">
                 <a href="/" class="logo">Sencie<span>.kz</span></a>
                 <nav>
+                    <a href="#catalog">Каталог</a>
                     <a href="#about">О нас</a>
                     <a href="#contact">Контакты</a>
                 </nav>
@@ -320,6 +413,134 @@
                 <h1>Красота начинается с <span>Sencie</span></h1>
                 <p>Качественная косметика и парфюмерия в Астане. Мы помогаем вам выглядеть и чувствовать себя прекрасно каждый день.</p>
                 <a href="#contact" class="btn">Связаться с нами</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Наш каталог</h2>
+            <div class="catalog-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=400&fit=crop" alt="CHANEL Chance Eau Tendre" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Парфюмерия</div>
+                        <h3 class="product-name">CHANEL Chance Eau Tendre</h3>
+                        <p class="product-description">Туалетная вода, 100 мл. Нежный цветочно-фруктовый аромат</p>
+                        <div class="product-price">89 900 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=400&h=400&fit=crop" alt="Dior Sauvage" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Парфюмерия</div>
+                        <h3 class="product-name">Dior Sauvage EDP</h3>
+                        <p class="product-description">Парфюмерная вода, 100 мл. Свежий пряный аромат для мужчин</p>
+                        <div class="product-price">95 000 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop" alt="MAC Ruby Woo" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Макияж</div>
+                        <h3 class="product-name">MAC Lipstick Ruby Woo</h3>
+                        <p class="product-description">Культовая матовая помада классического красного оттенка</p>
+                        <div class="product-price">14 500 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop" alt="Charlotte Tilbury Pillow Talk" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Макияж</div>
+                        <h3 class="product-name">Charlotte Tilbury Pillow Talk</h3>
+                        <p class="product-description">Палетка теней для век, 12 оттенков nude</p>
+                        <div class="product-price">32 000 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1570194065650-d99fb4b38b15?w=400&h=400&fit=crop" alt="La Mer Creme de la Mer" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Уход за кожей</div>
+                        <h3 class="product-name">La Mer Moisturizing Cream</h3>
+                        <p class="product-description">Увлажняющий крем, 30 мл. Легендарный уход за кожей</p>
+                        <div class="product-price">125 000 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&h=400&fit=crop" alt="The Ordinary Niacinamide" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Уход за кожей</div>
+                        <h3 class="product-name">The Ordinary Niacinamide 10%</h3>
+                        <p class="product-description">Сыворотка для сужения пор и выравнивания тона, 30 мл</p>
+                        <div class="product-price">4 900 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&h=400&fit=crop" alt="COSRX Snail Mucin" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">K-Beauty</div>
+                        <h3 class="product-name">COSRX Snail Mucin Essence</h3>
+                        <p class="product-description">Эссенция с муцином улитки 96%, 100 мл</p>
+                        <div class="product-price">12 500 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=400&fit=crop" alt="SOME BY MI Toner" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">K-Beauty</div>
+                        <h3 class="product-name">SOME BY MI AHA-BHA-PHA Toner</h3>
+                        <p class="product-description">Кислотный тонер для проблемной кожи, 150 мл</p>
+                        <div class="product-price">8 900 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop" alt="Olaplex No.3" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Уход за волосами</div>
+                        <h3 class="product-name">Olaplex No.3 Hair Perfector</h3>
+                        <p class="product-description">Эликсир для восстановления волос, 100 мл</p>
+                        <div class="product-price">18 500 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=400&h=400&fit=crop" alt="Moroccanoil Treatment" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Уход за волосами</div>
+                        <h3 class="product-name">Moroccanoil Treatment</h3>
+                        <p class="product-description">Восстанавливающее масло для волос, 100 мл</p>
+                        <div class="product-price">22 000 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop" alt="Real Techniques Brushes" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Аксессуары</div>
+                        <h3 class="product-name">Real Techniques Everyday Set</h3>
+                        <p class="product-description">Набор кистей для макияжа, 5 штук</p>
+                        <div class="product-price">9 900 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1583209814683-c023dd293cc6?w=400&h=400&fit=crop" alt="Sol de Janeiro Bum Bum Cream" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Уход за телом</div>
+                        <h3 class="product-name">Sol de Janeiro Bum Bum Cream</h3>
+                        <p class="product-description">Культовый крем для тела с ароматом карамели, 240 мл</p>
+                        <div class="product-price">28 000 тг</div>
+                        <a href="#contact" class="product-btn">Заказать</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -375,6 +596,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Навигация</h4>
+                    <a href="#catalog">Каталог</a>
                     <a href="#about">О нас</a>
                     <a href="#contact">Контакты</a>
                 </div>
